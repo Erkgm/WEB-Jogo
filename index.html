@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termologia</title>
+  <!-- Link para o arquivo CSS que define o estilo da página -->
+  <link rel="stylesheet" href="css/JogoTermo.css">
+</head>
+<body>
+<header>
+  <!-- Seção de descrição e introdução do jogo -->
+  <div class="descricao">
+    <!-- Ícone decorativo para o título -->
+    <span class="icone-livro">📖</span>
+    <h1>Termologia: descubra a palavra e não ganhe nada</h1>
+    <p>Tente adivinhar a palavra. Você tem 6 chances para acertar.</p>
+  </div>
+</header>
+<main class="jogo-container">
+  <!-- Contêiner principal do jogo -->
+  <div class="tabuleiro-container">
+    <!-- Tabuleiro onde as palavras tentadas aparecerão -->
+    <div id="board"></div>
+    <!-- Campo de entrada e botão para enviar a tentativa -->
+    <div class="input-container">
+      <input type="text" id="guess-input" maxlength="5" placeholder="Digite sua palavra" />
+      <button id="submit-guess">Enviar</button>
+    </div>
+    <!-- Mensagem de feedback para o jogador -->
+    <p id="message"></p>
+  </div>
+  <!-- Seção para exibir dicas ao jogador -->
+  <div class="dica-container">
+    <p class="dica">💡 <strong>DICA:</strong> nomes derivados e usados na programação.</p>
+  </div>
+</main>
+<!-- Link para o arquivo JavaScript que contém a lógica do jogo -->
+<script src="js/JogoTermo.js"></script>
+</body>
+</html>

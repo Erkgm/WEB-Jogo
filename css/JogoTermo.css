@@ -1,0 +1,177 @@
+body {
+  /* Configurações gerais do corpo da página */
+  font-family: 'Arial', sans-serif;
+  background-color: #0d1117; /* Fundo escuro para estilo noturno */
+  color: #c9d1d9; /* Texto em cinza claro para contraste */
+  margin: 0;
+  padding: 20px;
+  text-align: center; /* Centraliza o conteúdo por padrão */
+}
+
+.cabecalho {
+  /* Estilo do cabeçalho principal */
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #161b22; /* Fundo ligeiramente mais claro que o corpo */
+  padding: 20px;
+  border-radius: 10px; /* Bordas arredondadas para um visual moderno */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra para profundidade */
+}
+
+.descricao-esquerda {
+  /* Centraliza e limita a largura da descrição */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.icone-livro {
+  /* Estilo do ícone usado no cabeçalho */
+  font-size: 2rem; /* Aumenta o tamanho do ícone */
+  display: inline-block;
+  margin-right: 10px;
+  color: #3fb950; /* Verde vibrante para destaque */
+}
+
+h1 {
+  /* Estilo do título principal */
+  font-size: 2rem;
+  margin: 0 0 10px;
+  color: #3fb950; /* Verde vibrante para chamar atenção */
+}
+
+p {
+  /* Estilo padrão para parágrafos */
+  margin: 0;
+  font-size: 1rem;
+  color: #c9d1d9; /* Texto em cinza claro */
+}
+
+.jogo-container {
+  /* Contêiner principal do jogo */
+  display: flex; /* Flexbox para organizar os elementos horizontalmente */
+  justify-content: center; /* Centraliza os elementos no eixo principal */
+  align-items: flex-start; /* Alinha os elementos ao topo no eixo secundário */
+  gap: 20px; /* Espaçamento entre os elementos */
+  max-width: 1000px; /* Limita a largura máxima */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.tabuleiro-container {
+  /* Estilo do contêiner do tabuleiro */
+  background-color: #161b22; /* Fundo escuro */
+  padding: 20px;
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Adiciona profundidade */
+  text-align: center; /* Centraliza o conteúdo interno */
+}
+
+#board {
+  /* Estilo do tabuleiro onde as letras serão exibidas */
+  display: grid; /* Define um layout em grade */
+  grid-template-columns: repeat(5, 1fr); /* Cinco colunas iguais */
+  gap: 10px; /* Espaçamento entre as células */
+  margin-bottom: 20px;
+}
+
+.tile {
+  /* Estilo de cada célula do tabuleiro */
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem; /* Texto grande para letras */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #30363d; /* Borda inicial */
+  background-color: #0d1117; /* Fundo escuro */
+  color: #c9d1d9; /* Texto cinza claro */
+  text-transform: uppercase; /* Letras em maiúsculas */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-weight: bold;
+  transition: all 0.3s ease; /* Suaviza as transições de estilos */
+}
+
+.tile.correct {
+  /* Estilo para letras corretas na posição correta */
+  background-color: #238636; /* Verde escuro */
+  color: white;
+  border-color: #238636;
+}
+
+.tile.present {
+  /* Estilo para letras presentes na palavra, mas na posição errada */
+  background-color: #3fb950; /* Verde claro */
+  color: white;
+  border-color: #3fb950;
+}
+
+.tile.absent {
+  /* Estilo para letras ausentes na palavra */
+  background-color: #30363d; /* Cinza escuro */
+  color: white;
+  border-color: #30363d;
+}
+
+.input-container {
+  /* Contêiner para o campo de entrada e botão */
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espaçamento entre o campo e o botão */
+}
+
+#guess-input {
+  /* Campo de entrada para as palavras */
+  padding: 10px;
+  font-size: 1rem;
+  text-transform: uppercase; /* Converte o texto para maiúsculas */
+  width: 150px; /* Define a largura fixa */
+  border: 2px solid #30363d; /* Borda inicial */
+  border-radius: 5px;
+  background-color: #161b22; /* Fundo escuro */
+  color: #c9d1d9; /* Texto cinza claro */
+  outline: none; /* Remove o contorno padrão ao focar */
+  text-align: center; /* Centraliza o texto */
+  transition: all 0.3s ease; /* Suaviza as transições */
+}
+
+#guess-input:focus {
+  /* Estilo ao focar no campo de entrada */
+  border-color: #3fb950; /* Verde claro */
+}
+
+#submit-guess {
+  /* Botão para enviar o palpite */
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #3fb950; /* Verde claro */
+  color: #0d1117; /* Texto escuro para contraste */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Animação suave */
+}
+
+#submit-guess:hover {
+  /* Efeito ao passar o mouse no botão */
+  background-color: #238636; /* Verde mais escuro */
+}
+
+#message {
+  /* Mensagem de feedback ao jogador */
+  margin-top: 20px;
+  font-size: 1.2rem; /* Texto um pouco maior */
+  color: #c9d1d9; /* Texto cinza claro */
+  font-weight: bold;
+}
+
+.dica-container {
+  /* Estilo do contêiner de dicas */
+  background-color: #161b22; /* Fundo escuro */
+  padding: 20px;
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra para profundidade */
+  color: #3fb950; /* Texto verde claro */
+  font-weight: bold;
+  max-width: 300px; /* Largura limitada */
+  text-align: left; /* Alinha o texto à esquerda */
+}
